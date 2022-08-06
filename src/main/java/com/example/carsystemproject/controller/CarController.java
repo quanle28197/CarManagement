@@ -26,6 +26,11 @@ public class CarController {
         this.modelMapper = modelMapper;
     }
 
+    @GetMapping("/list")
+    public ResponseEntity<Iterable<Car>> showAll() {
+        return new ResponseEntity<>(carService.findAll(), HttpStatus.OK);
+    }
+
     @PostMapping(produces = "application/json")
     public ResponseEntity<?> addCar(@RequestBody @Valid CarRequestDTO carRequestDTO) {
         Car car = modelMapper.map(carRequestDTO, Car.class);

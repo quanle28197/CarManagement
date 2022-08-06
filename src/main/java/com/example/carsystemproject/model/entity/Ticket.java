@@ -15,7 +15,7 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ticketId", length = 20)
-    private long id;
+    private Long id;
 
     @NotNull(message = "booking time required")
     @JsonFormat(pattern = "HH:mm:ss", shape = JsonFormat.Shape.STRING)

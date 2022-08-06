@@ -18,7 +18,7 @@ public class Trip {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "tripId", length = 20)
-    private long id;
+    private Long id;
 
     @Min(0)
     @Column(length = 11)

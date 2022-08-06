@@ -1,6 +1,7 @@
 package com.example.carsystemproject.service.car;
 
 import com.example.carsystemproject.model.entity.Car;
+import com.example.carsystemproject.model.entity.Employee;
 import com.example.carsystemproject.model.entity.ParkingLot;
 import com.example.carsystemproject.repository.CarRepository;
 import com.example.carsystemproject.service.exception.ExistedException;
@@ -46,5 +47,10 @@ public class CarService implements ICarService{
         Car car = getCarByLicensePlate(licensePlate);
         car.setParkingLot(parkingLot);
         return carRepository.save(car);
+    }
+
+    @Override
+    public Iterable<Car> findAll() {
+        return carRepository.findAll();
     }
 }

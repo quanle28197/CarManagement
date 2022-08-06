@@ -13,7 +13,7 @@ public class BookingOffice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "officeId", length = 20)
-    private long id;
+    private Long id;
 
     @Column(name = "officeName", length = 50)
     @NotBlank(message = "name required")

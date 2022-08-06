@@ -1,6 +1,7 @@
 package com.example.carsystemproject.service.car;
 
 import com.example.carsystemproject.model.entity.Car;
+import com.example.carsystemproject.model.entity.Employee;
 
 import java.util.List;
 
@@ -12,4 +13,6 @@ public interface ICarService {
     List<Car> getAllCar(int pageNum, int pageSize);
 
     Car addParkingLotToCar(String licensePlate, Long parkId);
+
+    Iterable<Car> findAll();
 }
